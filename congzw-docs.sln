@@ -5,6 +5,7 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{7569870D-8935-4863-84BD-9863EDEA1620}"
 	ProjectSection(SolutionItems) = preProject
+		docs\nb-cm.md = docs\nb-cm.md
 		docs\note-pro-git.md = docs\note-pro-git.md
 	EndProjectSection
 EndProject
