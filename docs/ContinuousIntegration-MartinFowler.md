@@ -1,10 +1,53 @@
 # 持续集成
 
-## 前言
+[原文链接](https://www.martinfowler.com/articles/continuousIntegration.html)
+
+Content
+
+	Building a Feature with Continuous Integration	
+	Practices of Continuous Integration	
+		Maintain a Single Source Repository		
+		Automate the Build		
+		Make Your Build Self-Testing		
+		Everyone Commits To the Mainline Every Day		
+		Every Commit Should Build the Mainline on an Integration Machine		
+		Fix Broken Builds Immediately		
+		Keep the Build Fast		
+		Test in a Clone of the Production Environment		
+		Make it Easy for Anyone to Get the Latest Executable		
+		Everyone can see what's happening		
+		Automate Deployment		
+	Benefits of Continuous Integration	
+	Introducing Continuous Integration	
+	Final Thoughts	
+	Further Reading	
+
+目录
+
+	用持续集成构建特性
+	持续集成实践
+		只维护一个源码库
+		自动化构建
+		让你的构建自行测试
+		每人每天都要向主线提交代码
+		在集成计算机上重新构建主线的每次提交
+		立刻修复构建问题
+		保持快速构建
+		在模拟生产环境中进行测试
+		让每个人都能轻易获得最新的可执行文件
+		每个人都能看到进度
+		自动化部署
+	持续集成的益处
+	引入持续集成
+	最后的思考
+	延伸阅读
+
+## Building a Feature with Continuous Integration
+用持续集成构建特性
 
 > Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly. This article is a quick overview of Continuous Integration summarizing the technique and its current usage.
 
-持续集成(Continuous Integration, CI)是一种软件开发实践，在实践中项目成员频繁地进行集成，通常每个成员每天都会做集成工作，如此，每天整个项目将会有多次集成。每次集成后都会通过自动化构建（包括测试）来尽快发现其中的错误。许多团队都发现这种方法大大地减少了集成问题并且能够快速地开发出高内聚性的软件。本文简要地总结了持续集成技术及其现状。
+持续集成是一种软件开发实践，在实践中项目成员频繁地进行集成，通常每个成员每天都会做集成工作，如此每天会有多次集成。每次集成后都会通过自动化构建（包括测试）来尽快发现其中的错误。许多团队都发现这种方法大大地减少了集成问题并且能够快速地开发出高内聚性的软件。本文简要地总结了持续集成技术及其应用现状。
 
 > I vividly remember one of my first sightings of a large software project. I was taking a summer internship at a large English electronics company. My manager, part of the QA group, gave me a tour of a site and we entered a huge depressing warehouse stacked full with cubes. I was told that this project had been in development for a couple of years and was currently integrating, and had been integrating for several months. My guide told me that nobody really knew how long it would take to finish integrating. From this I learned a common story of software projects: integration is a long and unpredictable process.
 
@@ -12,7 +55,7 @@
 
 > But this needn't be the way. Most projects done by my colleagues at ThoughtWorks, and by many others around the world, treat integration as a non-event. Any individual developer's work is only a few hours away from a shared project state and can be integrated back into that state in minutes. Any integration errors are found rapidly and can be fixed rapidly.
 
-然而，软件集成不必像这样的。在ThoughtWorks的大多数项目还有世界上许多其它组织的软件项目中，软件集成并不是什么难事。每个开发人员离共享的工程状态只有咫尺之遥，并且可以在几分钟之内将自己的代码集成进去。任何集成错误都能被快速地发现并得到快速的修正。
+然而软件集成并不必须这样。在ThoughtWorks的大多数项目还有世界上许多其它组织的软件项目中，软件集成并不是什么难事。每个开发人员离共享的工程状态只有咫尺之遥，并且可以在几分钟之内将自己的代码集成进去。任何集成错误都能被快速地发现并得到修正。
 
 > This contrast isn't the result of an expensive and complex tool. The essence of it lies in the simple practice of everyone on the team integrating frequently, usually daily, against a controlled source code repository.
 
@@ -20,7 +63,7 @@
 
 > When I've described this practice to people, I commonly find two reactions: "it can't work (here)" and "doing it won't make much difference". What people find out as they try it is that it's much easier than it sounds, and that it makes a huge difference to development. Thus the third common reaction is "yes we do that - how could you live without it?"
 
-当我向人们阐述这种实践时，通常得到两种反应：“（在我们这里）行不通”和“无关紧要”。当人们尝试了这种实践之后，他们发现其实做起来比说起来简单，而且这样的实践对于开发“至关重要”。因此有了第三种反应：“是的，我们就是这么做的，不然该怎么活啊？”
+当我向人们阐述这种实践时，通常得到两种反应：“这（在我们这儿）不管用”和“做了也不可能有什么不同”。但如果他们真的试过了，就会发现持续集成其实比听起来要简单，并且能给开发过程带来巨大的改变。因此有了第三种反应：“是的，我们就是这么做的，不然该怎么活啊？”
 
 > The term 'Continuous Integration' originated with the Extreme Programming development process, as one of its original twelve practices. When I started at ThoughtWorks, as a consultant, I encouraged the project I was working with to use the technique. Matthew Foemmel turned my vague exhortations into solid action and we saw the project go from rare and complex integrations to the non-event I described. Matthew and I wrote up our experience in the original version of this paper, which has been one of the most popular papers on my site.
 
@@ -31,7 +74,7 @@
 虽然持续集成并不需要使用特别的工具来部署，但是我们发现拥有一台持续集成服务器将大有益处，其中最著名的有开源的CruiseControl，该软件最初由ThoughtWorks的几个员工开发，现在由一个很大的社区维护着。后来几款其它的持续集成服务器也相继出现了，有开源的，也有商业化的，包括ThoughtWorks Studios的Cruise。
 
 ## Building a Feature with Continuous Integration
-在开发中使用持续集成
+用持续集成实践来构建特性
 
 > The easiest way for me to explain what CI is and how it works is to show a quick example of how it works with the development of a small feature. Let's assume I have to do something to a piece of software, it doesn't really matter what the task is, for the moment I'll assume it's small and can be done in a few hours. (We'll explore longer tasks, and other issues later on.)
 
@@ -93,11 +136,11 @@
 
 > Once you get a source code management system, make sure it is the well known place for everyone to go get source code. Nobody should ever ask "where is the foo-whiffle file?" Everything should be in the repository.
 
-当你有了代码管理系统之后，确保每个开发者都能方便的获得到源代码。不应该有人还在问：“foo-whiffle 文件在哪儿？”所有东西都必须在代码库里。
+当你有了代码管理系统之后，确保每个开发者都能方便的获得到源代码。不应该有人还在问：“某个文件在哪儿？”所有东西都必须在代码库里。
 
 > Although many teams use repositories a common mistake I see is that they don't put everything in the repository. If people use one they'll put code in there, but everything you need to do a build should be in there including: test scripts, properties files, database schema, install scripts, and third party libraries. I've known projects that check their compilers into the repository (important in the early days of flaky C++ compilers). The basic rule of thumb is that you should be able to walk up to the project with a virgin machine, do a checkout, and be able to fully build the system. Only a minimal amount of things should be on the virgin machine - usually things that are large, complicated to install, and stable. An operating system, Java development environment, or base database system are typical examples.
 
-虽然许多团队都在使用代码库，但是我经常发现，他们并不把所有东西都放在里面。如果大家需要使用一个文件，他们知道该文件放到代码库中，但是，构建所需的所有都应该包含在代码库里，包括测试脚本，属性文件，数据库模式文件，安装脚本和第三方库等。我所知道的有项目将编译器加到代码库中的（对于早期脆弱的C++编译器来说非常重要）。基本原则是：在一台新机器上check out代码后构建也能构建成功。新机器上的东西应该尽量的少，通常包括很大的，难于安装的，并且稳定的软件，比如操作系统，Java开发环境或者数据库管理系统等。
+虽然许多团队都在使用代码库，但是我经常发现，他们并不把所有东西都放在里面。如果大家需要使用一个文件，他们知道该文件放到代码库中，但是，构建所需的所有都应该包含在代码库里，包括测试脚本，属性文件，数据库模式文件，安装脚本和第三方库等。我所知道的有项目将编译器加到代码库中的（对于早期脆弱的C++编译器来说非常重要）。基本原则是：在一台新机器上获取最新代码后构建也能构建成功。新机器上的东西应该尽量的少，通常包括很大的，难于安装的，并且稳定的软件，比如操作系统，Java开发环境或者数据库管理系统等。
 
 > You must put everything required for a build in the source control system, however you may also put other stuff that people generally work with in there too. IDE configurations are good to put in there because that way it's easy for people to share the same IDE setups.
 
@@ -252,7 +295,7 @@ XUnit当之无愧地是你进行代码自测试的起点。当然，你也应当
 
 > To help avoid breaking the mainline at all you might consider using a pending head.
 
-为了彻底避免主线构建失败，也许你可以试试(pending head)[https://www.martinfowler.com/bliki/PendingHead.html]。
+为了彻底避免主线构建失败，也许你可以试试挂起最新[pending head](https://www.martinfowler.com/bliki/PendingHead.html)。
 
 > When teams are introducing CI, often this is one of the hardest things to sort out. Early on a team can struggle to get into the regular habit of working mainline builds, particularly if they are working on an existing code base. Patience and steady application does seem to regularly do the trick, so don't get discouraged.
 
@@ -472,11 +515,11 @@ Bug也存在积累性，bug越多，越难清除。部分原因在于bug之间�
 
 > An essay like this can only cover so much ground, but this is an important topic so I've created a [guide page](https://www.martinfowler.com/delivery.html) on my website to point you to more information.
 
-像本文这样的文章通常只能涵盖一些基本，但它却是一种重要的话题，所以我在自己网站上放了一个guide page，那里你可以获得更多的信息。
+像本文这样的文章通常只能涵盖一些基本，但它却是一种重要的话题，所以我在自己网站上放了一个引导页，那里你可以获得更多的信息。
 
 > To explore Continuous Integration in more detail I suggest taking a look at Paul Duvall's [appropriately titled book](https://www.martinfowler.com/books/duvall.html) on the subject (which won a Jolt award - more than I've ever managed). For more on the broader process of Continuous Delivery, take a look at [Jez Humble and Dave Farley's book](http://www.thoughtworks.com/continuous-integration) - which also beat me to a Jolt award.
 
-如果想了解持续集成更多的细节，我建议Paul Duvall（Jolt奖得主）的Continuous Integration: Improving Software Quality and Reducing Risk。对于更宽泛的持续交付，可以看看Humble 和 Dave Farley的Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation。
+如果想了解持续集成更多的细节，我建议Paul Duvall（Jolt奖得主）的《Continuous Integration: Improving Software Quality and Reducing Risk》。对于更宽泛的持续交付，可以看看Humble 和 Dave Farley的《Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation》。
 
 > You can also find more information on Continuous Integration on [the ThoughtWorks site](http://www.thoughtworks.com/continuous-integration).
 
