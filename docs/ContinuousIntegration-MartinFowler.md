@@ -441,15 +441,15 @@ XUnit当之无愧地是你进行代码自测试的起点。当然，你也应当
 
 > The trouble with deferred integration is that it's very hard to predict how long it will take to do, and worse it's very hard to see how far you are through the process. The result is that you are putting yourself into a complete blind spot right at one of tensest parts of a project - even if you're one of the rare cases where you aren't already late.
 
-延期集成的缺点在于，很难预测集成到底要花多少时间，更糟的是，你很难了解集成的进展情况。
+延期集成的缺点在于，很难预测集成到底要花多少时间，更糟的是，你很难了解集成的进展情况。结果是将自己置身于项目关键部分的盲点，即使你很少延迟。
 
 > Continuous Integration completely finesses this problem. There's no long integration, you completely eliminate the blind spot. At all times you know where you are, what works, what doesn't, the outstanding bugs you have in your system.
 
-持续集成正好解决了这些问题。每次集成的时间都不长，任何时候你都知道自己所处的情况，软件的哪些地方在工作，哪些没有。
+持续集成正好解决了这些问题。每次集成的时间都不长，没有盲点。任何时候你都知道自己所处的情况，软件的哪些地方好使，哪些不好使，系统中还有哪些bug。
 
 > Bugs - these are the nasty things that destroy confidence and mess up schedules and reputations. Bugs in deployed software make users angry with you. Bugs in work in progress get in your way, making it harder to get the rest of the software working correctly.
 
-Bug——恶心的玩意儿，伤害我们的自信，搅乱我们的日程，还破坏我们的名声。如果在生产环境中遇到了bug，那么用户将会把气往你身上撒。而在开发环境中，bug拦着你的路，迫使你无法完成余下的工作。
+Bug——这些讨厌的东西，破坏我们的自信、日程和声誉。如果在生产环境中遇到了bug，那么用户将会把气往你身上撒。而在开发环境中，bug成了拦路虎，阻挡你完成余下的工作。
 
 > Continuous Integrations doesn't get rid of bugs, but it does make them dramatically easier to find and remove. In this respect it's rather like self-testing code. If you introduce a bug and detect it quickly it's far easier to get rid of. Since you've only changed a small bit of the system, you don't have far to look. Since that bit of the system is the bit you just worked with, it's fresh in your memory - again making it easier to find the bug. You can also use diff debugging - comparing the current version of the system to an earlier one that didn't have the bug.
 
@@ -457,15 +457,15 @@ Bug——恶心的玩意儿，伤害我们的自信，搅乱我们的日程，�
 
 > Bugs are also cumulative. The more bugs you have, the harder it is to remove each one. This is partly because you get bug interactions, where failures show as the result of multiple faults - making each fault harder to find. It's also psychological - people have less energy to find and get rid of bugs when there are many of them - a phenomenon that the Pragmatic Programmers call the Broken Windows syndrome.
 
-Bug也存在积累性，bug越多，越难清除。部分原因在于bug之间存在牵连。另外也存在心理因素，bug一多，人便没那么多精力去修了——这就是所谓的“Broken Windows 综合征”。
+Bug也存在积累性，bug越多，越难清除。部分原因在于bug之间存在牵连，多个错误会更难定位。另外也存在心理因素，bug一多，人便没那么多精力去修了——这就是所谓的“破窗综合征”。
 
 > As a result projects with Continuous Integration tend to have dramatically less bugs, both in production and in process. However I should stress that the degree of this benefit is directly tied to how good your test suite is. You should find that it's not too difficult to build a test suite that makes a noticeable difference. Usually, however, it takes a while before a team really gets to the low level of bugs that they have the potential to reach. Getting there means constantly working on and improving your tests.
 
-因此，对于采用持续集成的团队，bug将大大减少，不管是在生产环境，还是在开发环境。但是，我想强调的是，你的获益程度取决于测试的好坏程度。你或许已发现，写出好多测试并不难。然而，要达到低bug率的程度依然是需要时间的，你还得不断地引入并改进自己的测试。
+对于采用持续集成的团队，bug将大大减少，不管是在生产环境，还是在开发环境。但我想强调的是，你的获益程度取决于测试的好坏程度。你或许已发现，写出有用的测试套件并不太难。但通常要达到低bug率还是需要一段时间的，这意味着，你得不断地改进自己的测试。
 
 > If you have continuous integration, it removes one of the biggest barriers to frequent deployment. Frequent deployment is valuable because it allows your users to get new features more rapidly, to give more rapid feedback on those features, and generally become more collaborative in the development cycle. This helps break down the barriers between customers and development - barriers which I believe are the biggest barriers to successful software development.
 
-有了持续集成，频繁部署也不是什么难事了。频繁部署的价值在于，你的客户可以快速的享用软件的新功能，并能快速的提出反馈。这将有利于清除客户和开发之间的障碍——我认为这是软件开发最大的障碍。
+有了持续集成，频繁部署也不是什么难事了。频繁部署的价值在于，你的客户可以快速的享用软件的新功能，并能快速的提出反馈。这将有利于清除客户和开发之间的障碍——我认为这是软件开发中最大的障碍。
 
  　　
 ## Introducing Continuous Integration
@@ -473,27 +473,27 @@ Bug也存在积累性，bug越多，越难清除。部分原因在于bug之间�
 
 > So you fancy trying out Continuous Integration - where do you start? The full set of practices I outlined above give you the full benefits - but you don't need to start with all of them.
 
-然后你开始试着玩持续集成了，但该从何入手呢？上文中我所罗列持续集成实践可以给你带来太多的好处，但是你并不必在一开始就完全采用这些实践的。
+于是你跃跃越试想开始尝试持续集成了，但该从何入手呢？上文中我所罗列了可以给你带来所有好处的所有实践-你并见得在一开始就全盘采用。
 
 > There's no fixed recipe here - much depends on the nature of your setup and team. But here are a few things that we've learned to get things going.
 
-做持续集成没有套路，主要取决于你团队自身的情况，但是我们发现以下几点对于持续集成来说是比较通用的。
+做持续集成没有固定套路，更多是要取决于你团队自身的情况。下面是我们的一些实践经验。
 
 > One of the first steps is to get the build automated. Get everything you need into source control get it so that you can build the whole system with a single command. For many projects this is not a minor undertaking - yet it's essential for any of the other things to work. Initially you may only do build occasionally on demand, or just do an automated nightly build. While these aren't continuous integration an automated nightly build is a fine step on the way.
 
-第一步需要将构建自动化，并将你所需的所有东西都放在代码管理系统中，以至于可以通过一个命令来构建整个系统。对很多项目来说，这并非易事。一开始，你可以按照需要进行构建，或者可以只做自动化的夜晚构建。虽然，这些做法都不能称为持续集成，但夜晚构建确是一个好的起点。
+先让构建自动化。将你所需的所有东西都放在代码管理系统中，这样可以“一键”来构建整个系统。对很多项目来说，这并非易事，但这却是基础。最开你可以采取照需构建，或日/夜构建。虽然这些做法都不是真正意义上的“持续集成”，但的确可以作为一个不错的开始。
 
 > Introduce some automated testing into your build. Try to identify the major areas where things go wrong and get automated tests to expose those failures. Particularly on an existing project it's hard to get a really good suite of tests going rapidly - it takes time to build tests up. You have to start somewhere though - all those cliches about Rome's build schedule apply.
 
-在构建中引入一些自动化测试，试着确定出现问题的主要范围，并用自动化测试去发现这些问题。尤其对于已有的项目来说，很难快速建立真正的一套测试，需要耗费时间。这时你就得另寻它路了：罗马不是一天建成的。
+在构建中引入自动化测试。试着确定主要区域并用自动化测试去暴露问题。尤其对于已有的项目来说，很难快速建立一套很好的测试，通常要耗费时间。你必须找到切入点开始：怎么说的来着，罗马不是一天建成的。
 
 > Try to speed up the commit build. Continuous Integration on a build of a few hours is better than nothing, but getting down to that magic ten minute number is much better. This usually requires some pretty serious surgery on your code base to do as you break dependencies on slow parts of the system.
 
-使提交构建快速完成。虽然好几个小时的持续集成比没有要好，但是如果你能将构建时间缩短到几十分钟，或者就短短的10分钟，这就再好不过了。这通常需要在您的代码库中进行一些重大的调整, 以便解耦哪些慢速的依赖关系。
+为提交构建提速。虽然好几个小时的持续集成比没有要好，但是如果你能将构建时间缩短到几十分钟，或者就短短的10分钟，这就再好不过了。这通常需要在您的代码库中进行一些重大的调整, 以便解耦哪些慢速的依赖关系。
 
 > If you are starting a new project, begin with Continuous Integration from the beginning. Keep an eye on build times and take action as soon as you start going slower than the ten minute rule. By acting quickly you'll make the necessary restructurings before the code base gets so big that it becomes a major pain.
 
-对于新项目，从项目开始就采用持续集成。注意构建时间，如果构建时间违背了“10分钟原则”，那么请尽快采取行动。通过快速响应，在代码库变得如此庞大、成为主要痛苦之前进行必要的重组。
+对于新项目，从项目开始就采用持续集成。关注构建时间，如果构建时间违背了“10分钟原则”，尽快采取行动。通过快速响应，在代码库变得过于庞大和成为主要痛苦之前，进行必要重组。
 
 > Above all get some help. Find someone who has done Continuous Integration before to help you. Like any new technique it's hard to introduce it when you don't know what the final result looks like. It may cost money to get a mentor, but you'll also pay in lost time and productivity if you don't do it. (Disclaimer / Advert - yes we at ThoughtWorks do some consultancy in this area. After all we've made most of the mistakes that there are to make.)
 
