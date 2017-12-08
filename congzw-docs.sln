@@ -6,9 +6,13 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{7569870D-8935-4863-84BD-9863EDEA1620}"
 	ProjectSection(SolutionItems) = preProject
 		docs\branch.md = docs\branch.md
+		docs\Continuous Integration in .NET-note.md = docs\Continuous Integration in .NET-note.md
+		docs\ContinuousIntegration-MartinFowler-note.md = docs\ContinuousIntegration-MartinFowler-note.md
 		docs\ContinuousIntegration-MartinFowler.md = docs\ContinuousIntegration-MartinFowler.md
 		docs\nb-cm.md = docs\nb-cm.md
 		docs\note-pro-git.md = docs\note-pro-git.md
+		docs\持续交付-发布可靠软件的系统方法-note.md = docs\持续交付-发布可靠软件的系统方法-note.md
+		docs\持续集成-软件质量改进和风险降低之道-note.md = docs\持续集成-软件质量改进和风险降低之道-note.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "readme", "readme", "{BB2B0ECA-EB09-4632-B567-6F31280F3EB2}"
