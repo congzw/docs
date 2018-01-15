@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{7569870D-8
 		docs\ContinuousIntegration-MartinFowler.md = docs\ContinuousIntegration-MartinFowler.md
 		docs\nb-cm.md = docs\nb-cm.md
 		docs\note-pro-git.md = docs\note-pro-git.md
+		docs\note-sql.md = docs\note-sql.md
 		docs\持续交付-发布可靠软件的系统方法-note.md = docs\持续交付-发布可靠软件的系统方法-note.md
 		docs\持续集成-软件质量改进和风险降低之道-note.md = docs\持续集成-软件质量改进和风险降低之道-note.md
 	EndProjectSection
