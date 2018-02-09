@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{7569870D-8
 		docs\note-pro-git.md = docs\note-pro-git.md
 		docs\note-sql.md = docs\note-sql.md
 		docs\note-version.md = docs\note-version.md
+		docs\Team Foundation Server Architecture.md = docs\Team Foundation Server Architecture.md
 		docs\持续交付-发布可靠软件的系统方法-note.md = docs\持续交付-发布可靠软件的系统方法-note.md
 		docs\持续集成-软件质量改进和风险降低之道-note.md = docs\持续集成-软件质量改进和风险降低之道-note.md
 		docs\持续集成落地计划.md = docs\持续集成落地计划.md
