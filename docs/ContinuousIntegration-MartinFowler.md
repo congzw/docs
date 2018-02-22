@@ -86,7 +86,7 @@ Content
 
 > The above paragraph will make sense to people who use source code control systems, but be gibberish to those who don't. So let me quickly explain that for the latter. A source code control system keeps all of a project's source code in a repository. The current state of the system is usually referred to as the 'mainline'. At any time a developer can make a controlled copy of the mainline onto their own machine, this is called 'checking out'. The copy on the developer's machine is called a 'working copy'. (Most of the time you actually update your working copy to the mainline - in practice it's the same thing.)
 
-上一段文字主要针对使用代码控制系统的人，对于不使用代码控制系统的人来说便是胡言乱语了。因此，我将向后者解释一下。代码控制系统用于将项目所有的代码保存在一个代码库（repository）中，项目当前的状态通常被称为主线。任何时候开发人员都可以从主线上获得一份拷贝到本地机器，这被称为“checking out”。本地机器上的代码拷贝称为“working copy”。（多数时候，实际上你是在更新（update）本地代码到主线状态，实践中它们是一样的效果。）
+上一段文字主要针对使用代码控制系统的人，对于不使用代码控制系统的人来说便是胡言乱语了。因此，我将向后者解释一下。代码控制系统用于将项目所有的代码保存在一个代码库（repository）中，项目当前的状态通常被称为主线（mainline）。任何时候开发人员都可以从主线上获得一份拷贝到本地机器，这被称为“checking out”。本地机器上的代码拷贝称为“working copy”。（多数时候，实际上你是在更新（update）本地代码到主线状态，实践中它们是一样的效果。）
 
 > Now I take my working copy and do whatever I need to do to complete my task. This will consist of both altering the production code, and also adding or changing automated tests. Continuous Integration assumes a high degree of tests which are automated into the software: a facility I call self-testing code. Often these use a version of the popular XUnit testing frameworks.
 
@@ -214,7 +214,7 @@ XUnit当之无愧地是你进行代码自测试的起点。当然，你也应当
 
 > Of course you can't count on tests to find everything. As it's often been said: tests don't prove the absence of bugs. However perfection isn't the only point at which you get payback for a self-testing build. Imperfect tests, run frequently, are much better than perfect tests that are never written at all.
 
-当然，别指望测试就是万能的。常言道，测试并不能证明没bug。然而，完美并不是你从自测试构建中得到的唯一好处。经常运行的不完美测试，总比从来不写的完美测试要强。
+当然，别指望测试就是万能的。常言道，测试并不能证明没bug。然而，完美并不是你从自测试的构建中得到的唯一好处。经常运行的不完美测试，总比从来不写的完美测试要强。
 
 ### Everyone Commits To the Mainline Every Day
 每人每天都向主线提交代码
