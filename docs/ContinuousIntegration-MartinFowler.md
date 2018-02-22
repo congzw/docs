@@ -283,7 +283,7 @@ XUnit当之无愧地是你进行代码自测试的起点。当然，你也应当
 
 > A key part of doing a continuous build is that if the mainline build fails, it needs to be fixed right away. The whole point of working with CI is that you're always developing on a known stable base. It's not a bad thing for the mainline build to break, although if it's happening all the time it suggests people aren't being careful enough about updating and building locally before a commit. When the mainline build does break, however, it's important that it gets fixed fast.
 
-持续构建的重点在于，如果主线构建失败，你应该马上进行修改。在持续集成中，你一直是在一个稳定的代码库基础上进行开发。主线构建失败并不是一件坏事，但是，如果这样的情况经常发生，那么就意味着开发人员对于本地更新并没在意或者在提交之前并没在本地构建。主线构建一旦失败，必须马上修正。
+持续构建的关键在于，如果主线构建失败，你应该马上进行修改。在持续集成中，你一直是在一个稳定的代码库基础上进行开发。主线构建失败并不是一件坏事，但是，如果这样的情况经常发生，那么就意味着开发人员对于本地更新并没在意或者在提交之前并没在本地构建。主线构建一旦失败，必须马上修正。
 
 > A phrase I remember Kent Beck using was "nobody has a higher priority task than fixing the build". This doesn't mean that everyone on the team has to stop what they are doing in order to fix the build, usually it only needs a couple of people to get things working again. It does mean a conscious prioritization of a build fix as an urgent, high priority task.
 
@@ -485,7 +485,7 @@ Bug也存在积累性，bug越多，越难清除。部分原因在于bug之间�
 
 > Introduce some automated testing into your build. Try to identify the major areas where things go wrong and get automated tests to expose those failures. Particularly on an existing project it's hard to get a really good suite of tests going rapidly - it takes time to build tests up. You have to start somewhere though - all those cliches about Rome's build schedule apply.
 
-在构建中引入自动化测试。试着确定主要区域并用自动化测试去暴露问题。尤其对于已有的项目来说，很难快速建立一套很好的测试，通常要耗费时间。你必须找到切入点开始：怎么说的来着，罗马不是一天建成的。
+在构建中引入自动化测试。试着确定主要区域并用自动化测试去暴露问题。尤其对于已有的项目来说，很难快速建立一套很好的测试，通常要耗费时间。你必须找到切入点开始：老话说得好，罗马不是一天建成的。
 
 > Try to speed up the commit build. Continuous Integration on a build of a few hours is better than nothing, but getting down to that magic ten minute number is much better. This usually requires some pretty serious surgery on your code base to do as you break dependencies on slow parts of the system.
 
