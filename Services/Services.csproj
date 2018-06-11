@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseLib\ICrudService.cs" />
     <Compile Include="BaseLib\Users\AppServices\ITeacherAppService.cs" />
     <Compile Include="BaseLib\Users\AppServices\IUserAppService.cs" />
     <Compile Include="BaseLib\Users\IOrgUserCountService.cs" />

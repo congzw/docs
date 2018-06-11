@@ -54,6 +54,7 @@
     <Compile Include="BaseLib\Users\_Temp\Leader.cs" />
     <Compile Include="BaseLib\Users\_Temp\Parent.cs" />
     <Compile Include="BaseLib\Users\_Temp\TeacherGrade.cs" />
+    <Compile Include="Common\Data\Model\NbEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

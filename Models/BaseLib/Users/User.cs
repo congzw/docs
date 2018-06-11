@@ -1,6 +1,8 @@
-﻿namespace ZQNB.BaseLib.Users
+﻿using ZQNB.Common.Data.Model;
+
+namespace ZQNB.BaseLib.Users
 {
-    public class User
+    public class User : NbEntity<User>
     {
         
     }
