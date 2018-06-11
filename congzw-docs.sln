@@ -24,8 +24,32 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "readme", "readme", "{BB2B0E
 		readme.md = readme.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zqnb", "zqnb", "{02ABDF66-84FC-48C3-BBC5-3B10FC553FA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{43AA7F9F-21F0-4D4D-A0CC-EF2953494030}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{9DEB3C08-965F-4FB0-A9E5-E420D26C109C}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43AA7F9F-21F0-4D4D-A0CC-EF2953494030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43AA7F9F-21F0-4D4D-A0CC-EF2953494030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43AA7F9F-21F0-4D4D-A0CC-EF2953494030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43AA7F9F-21F0-4D4D-A0CC-EF2953494030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DEB3C08-965F-4FB0-A9E5-E420D26C109C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DEB3C08-965F-4FB0-A9E5-E420D26C109C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DEB3C08-965F-4FB0-A9E5-E420D26C109C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DEB3C08-965F-4FB0-A9E5-E420D26C109C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{43AA7F9F-21F0-4D4D-A0CC-EF2953494030} = {02ABDF66-84FC-48C3-BBC5-3B10FC553FA4}
+		{9DEB3C08-965F-4FB0-A9E5-E420D26C109C} = {02ABDF66-84FC-48C3-BBC5-3B10FC553FA4}
 	EndGlobalSection
 EndGlobal
