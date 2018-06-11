@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="BaseLib\Users\AppServices\ITeacherAppService.cs" />
     <Compile Include="BaseLib\Users\AppServices\IUserAppService.cs" />
+    <Compile Include="BaseLib\Users\IOrgUserCountService.cs" />
     <Compile Include="BaseLib\Users\IStudentService.cs" />
     <Compile Include="BaseLib\Users\ITeacherService.cs" />
     <Compile Include="BaseLib\Users\ITeacherSubjectAuditService.cs" />
