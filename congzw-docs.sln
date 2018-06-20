@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{7569870D-8
 		docs\nb-cm.md = docs\nb-cm.md
 		docs\note-AngularJs.md = docs\note-AngularJs.md
 		docs\note-jquery.md = docs\note-jquery.md
+		docs\note-linq.md = docs\note-linq.md
 		docs\note-pro-git.md = docs\note-pro-git.md
 		docs\note-sql.md = docs\note-sql.md
 		docs\note-version.md = docs\note-version.md
