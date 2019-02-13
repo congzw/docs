@@ -42,6 +42,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "privates", "privates", "{F3
 		privates\NbCrypto.exe = privates\NbCrypto.exe
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "files", "files\files.csproj", "{28FBBC3A-2A00-4D18-A9B9-268CBE87C4AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{9DEB3C08-965F-4FB0-A9E5-E420D26C109C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DEB3C08-965F-4FB0-A9E5-E420D26C109C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DEB3C08-965F-4FB0-A9E5-E420D26C109C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28FBBC3A-2A00-4D18-A9B9-268CBE87C4AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28FBBC3A-2A00-4D18-A9B9-268CBE87C4AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28FBBC3A-2A00-4D18-A9B9-268CBE87C4AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28FBBC3A-2A00-4D18-A9B9-268CBE87C4AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
