@@ -35,6 +35,7 @@
   <ItemGroup>
     <Content Include="scripts\查找表和列.sql" />
     <Content Include="scripts\查看最近改了那些东西.sql" />
+    <Content Include="scripts\表数据导出为脚本.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
